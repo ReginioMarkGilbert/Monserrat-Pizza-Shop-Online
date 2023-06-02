@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+   <link rel="icon" href="images/logo.png">
+   <title>Monserrat Pizza Shop Online</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+   <!-- LOG IN -->
+   <script type="text/javascript">
+      function login() {
+        // Get input values
+         var username = document.getElementById("username").value;
+         var password = document.getElementById("password").value;
+   
+        // Check if username and password are valid
+         if (username === "admin@gmail.com" && password === "password") {
+            alert("Login successful!");
+          // Redirect to the dashboard or another page
+         window.location.href = "index.html";
+         document.getElementById('loginStatus').textContent = 'You are logged in now!';
+         } else {
+         alert("Invalid username or password. Please try again.");
+         }
+      }
+   </script>
+
+
+</head>
+<body>
+   
+<!-- header section starts  -->
+
+<header class="header">
+
+   <section class="flex">
+
+   <img width="50" height="50" class="logo" src="images/logo.png" alt="Pizza Time logo" style="">
+   <p style>
+      Monserrat 
+      <span style>Pizza</span>
+
+      <nav class="main-nav flex-container flex-row txt-center"></nav>
+         <ul class="navigation-menu flex-row pop-font" style>
+            <li>
+               <a class="txt-white" href="#home" style>Home</a>
+            </li>
+            <li>
+               <a class="txt-white" href="#about" style>About</a>
+            </li>
+            <li>
+               <a class="txt-white" href="#menu">Menu</a>
+            </li>
+            <li>
+               <a class="txt-white" href="#order">Order</a>
+            </li>
+            <li>
+               <a class="txt-white" href="#faq" style>FAQ</a>
+            </li>
+            <li>
+               <a class="txt-white" href="TermsOfUse.html" style>Terms of Use</a>
+            </li>
+         </ul>
+      </nav>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="order-btn" class="fas fa-box"></div>
+         <div id="cart-btn" class="fas fa-shopping-cart"><span>(4)</span></div>
+      </div>
+
+   </section>
+
+</header>
+
+<!-- header section ends -->
+
+<div class="user-account">
+
+   <section>
+
+      <div id="close-account"><span>close</span></div>
+
+      <div class="user">
+         <p><span id="loginStatus">Log in now!</span></p>
+      </div>
+
+      <div class="display-orders">
+         <p>Margherita <span>( ₱249/- x 2 )</span></p>
+         <p>Four Cheese <span>( ₱495/- x 1 )</span></p>
+         <p>Italian <span>( ₱699/- x 4 )</span></p>
+         <p>Hawaiian <span>( ₱359/- x 1 )</span></p>
+      </div>
+
+      <div class="flex">
+         
+         <form>
+            <h3>login now</h3>
+            <input type="email" id="username" required class="box" placeholder="Enter your email" maxlength="50"><br>
+            
+            <input type="password" id="password" required class="box" placeholder="Enter your password" maxlength="20"><br>
+            
+            <button type="button" onclick="login()" class="btn">Login</button>
+         </form>
+
+         <form action="" method="post">
+            <h3>register now</h3>
+            <input type="text" name="name" required class="box" placeholder="enter your name" maxlength="20">
+            <input type="email" name="email" required class="box" placeholder="enter your email" maxlength="50">
+            <input type="password" name="pass" required class="box" placeholder="enter your password" maxlength="20">
+            <input type="password" name="cpass" required class="box" placeholder="confirm your password" maxlength="20">
+            <input type="submit" value="register now" name="register" class="btn">
+         </form>
+
+      </div>
+
+   </section>
+
+</div>
+
+<div class="my-orders">
+
+   <section>
+
+      <div id="close-orders"><span>close</span></div>
+
+      <h3 class="title"> My orders </h3>
+
+      <div class="box">
+         <p>Placed on : <span>15/05/2023</span> </p>
+         <p>Name : <span>Mark GIlbert Reginio</span> </p>
+         <p>Number : <span>09123456789</span></p>
+         <p>Address : <span>Matyatuya, Torrijos, Marinduque</span></p>
+         <p>Payment method : <span>cash on delivery</span></p>
+         <p>Your orders : <span>Hawaiian ₱359/- x 2, Italian ₱699/- x 1, Prima ₱449/- x 1, Tuscan ₱199/- x 1</span></p>
+         <p>Total price : <span>₱2065/-</span></p>
+         <p>Payment status : <span style="color: var(--red);">Pending</span> </p>
+      </div>
+
+      <div class="box">
+         <p>Placed on : <span>15/05/2023</span> </p>
+         <p>Name : <span>Ahmad Magdalita</span> </p>
+         <p>Number : <span>09123456789</span></p>
+         <p>Address : <span>Malibago, Torrijos, Marinduque</span></p>
+         <p>Payment method : <span>cash on delivery</span></p>
+         <p>Your orders : <span>Hawaiian ₱359/- x 2, Italian ₱699/- x 1, Prima ₱449/- x 1, Tuscan ₱199/- x 1</span></p>
+         <p>Total price : <span>₱2115/-</span></p>
+         <p>Payment status : <span style="color: var(--red);">Pizza is out for delivery</span> </p>
+      </div>
+
+      <div class="box">
+         <p>Placed on : <span>15/05/2023</span> </p>
+         <p>Name : <span>Kisha Mangubat</span> </p>
+         <p>Number : <span>09123456789</span></p>
+         <p>Address : <span>Kawit, Boac, Marinduque</span></p>
+         <p>Payment method : <span>cash on delivery</span></p>
+         <p>Your orders : <span>Hawaiian ₱359/- x 2, Italian ₱699/- x 1, Prima ₱449/- x 1, Tuscan ₱199/- x 1</span></p>
+         <p>Total price : <span>₱2115/-</span></p>
+         <p>Payment status : <span style="color: var(--red);">Pizza is out for delivery</span> </p>
+      </div>
+
+      <div class="box">
+         <p>Placed on : <span>15/05/2023</span> </p>
+         <p>Name : <span>Ma. Angela Sanchez</span> </p>
+         <p>Number : <span>09123456789</span></p>
+         <p>Address : <span>Gasan, Marinduque</span></p>
+         <p>Payment method : <span>cash on delivery</span></p>
+         <p>Your orders : <span>Hawaiian ₱359/- x 2, Italian ₱699/- x 1, Prima ₱449/- x 1, Tuscan ₱199/- x 1</span></p>
+         <p>Total price : <span>₱2115/-</span></p>
+         <p>Payment status : <span style="color: var(--red);">Pizza is out for delivery</span> </p>
+      </div>
+      
+      <div class="box">
+         <p>Placed on : <span>15/05/2023</span> </p>
+         <p>Name : <span>Erica Sosa</span> </p>
+         <p>Number : <span>09123456789</span></p>
+         <p>Address : <span>Gasan, Marinduque</span></p>
+         <p>Payment method : <span>cash on delivery</span></p>
+         <p>Your orders : <span>Hawaiian ₱359/- x 2, Italian ₱699/- x 1, Prima ₱449/- x 1, Tuscan ₱199/- x 1</span></p>
+         <p>Total price : <span>₱2115/-</span></p>
+         <p>Payment status : <span style="color: var(--red);">Pizza is out for delivery</span> </p>
+      </div>
+
+   </section>
+
+</div>
+
+<div class="shopping-cart">
+
+   <section>
+
+      <div id="close-cart"><span>close</span></div>
+
+      <div class="box">
+         <a href="#" class="fas fa-times"></a>
+         <img src="images/pizza-1.jpg" alt="">
+         <div class="content">
+            <p>Margherita <span>( ₱249/- x 2 )</span></p>
+            <form action="" method="post">
+               <input type="number" class="qty" name="qty" min="1" value="2" max="100">
+               <button type="submit" class="fas fa-edit" name="update_qty"></button>
+            </form>
+         </div>
+      </div>
+
+      <div class="box">
+         <a href="#" class="fas fa-times"></a>
+         <img src="images/pizza-3.jpg" alt="">
+         <div class="content">
+            <p>Italian <span>( ₱699/- x 1 )</span></p>
+            <form action="" method="post">
+               <input type="number" class="qty" name="qty" min="1" value="1" max="100">
+               <button type="submit" class="fas fa-edit" name="update_qty"></button>
+            </form>
+         </div>
+      </div>
+
+      <div class="box">
+         <a href="#" class="fas fa-times"></a>
+         <img src="images/pizza-6.jpg" alt="">
+         <div class="content">
+            <p>Prima <span>( ₱449/- x 2 )</span></p>
+            <form action="" method="post">
+               <input type="number" class="qty" name="qty" min="1" value="2" max="100">
+               <button type="submit" class="fas fa-edit" name="update_qty"></button>
+            </form>
+         </div>
+      </div>
+
+      <div class="box">
+         <a href="#" class="fas fa-times"></a>
+         <img src="images/pizza-7.jpg" alt="">
+         <div class="content">
+            <p>Tuscan <span>( ₱199/- x 1 )</span></p>
+            <form action="" method="post">
+               <input type="number" class="qty" name="qty" min="1" value="1" max="100">
+               <button type="submit" class="fas fa-edit" name="update_qty"></button>
+            </form>
+         </div>
+      </div>
+
+      <a href="#order" class="btn">Order now</a>
+
+   </section>
+
+</div>
+
+<div class="home-bg">
+
+   <section class="home" id="home">
+
+      <div class="slide-container">
+
+         <div class="slide active">
+            <div class="image">
+               <img src="images/pizza.gif" alt="">
+            </div>
+            <div>
+               <span class="welcome-text">Welcome</span>
+               <h1 class="amazing-text">try something amazing</h1>
+               <p class="order-text">Ordering your fave Pizza is quick and easy with our app or on our website.</p>
+            </div>
+         </div>
+      </div>
+
+   </section>
+
+</div>
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+   <h1 class="heading">about us</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <img src="images/about-1.svg" alt="">
+         <h3>Made with love</h3>
+         <p>Passionate about pizza, we create each pie with love. From handpicked ingredients to baking perfection, taste the difference that love makes!</p>
+         <a href="#menu" class="btn">our menu</a>
+      </div>
+
+      <div class="box">
+         <img src="images/about-2.svg" alt="">
+         <h3>30 Minutes delivery</h3>
+         <p>Craving pizza? We guarantee delivery in 30 minutes. Our dedicated drivers ensure your piping hot pizza arrives swiftly, satisfying your hunger!</p>
+         <a href="#menu" class="btn">our menu</a>
+      </div>
+
+      <div class="box">
+         <img src="images/about-3.svg" alt="">
+         <h3>Share with freinds</h3>
+         <p>Pizza is best shared. Gather your loved ones, create memories, and savor the joy of an unforgettable pizza experience together!</p>
+         <a href="#menu" class="btn">our menu</a>
+      </div>
+
+   </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- menu section starts  -->
+
+<section id="menu" class="menu">
+
+   <h1 class="heading">Our menu</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <div class="price">₱<span>249</span>/-</div>
+         <img src="images/pizza-1.jpg" alt="">
+         <div class="name">Margherita</div>
+         <div class="Description">Pizza dough, tomato sauce, fresh mozzarella, olive oil, basil leaves.</div>
+         <ul class="menu-item-attributes">
+            <li onclick="selectSize(this)">small</li>
+            <li onclick="selectSize(this)">medium</li>
+            <li onclick="selectSize(this)">large</li>
+            <li onclick="selectSize(this)">x-large</li>
+         </ul>
+         <form onsubmit="scrollToMenu()">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="Add to Cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+
+      
+      <div class="box">
+         <div class="price">₱<span>495</span>/-</div>
+         <img src="images/pizza-2.jpg" alt="">
+         <div class="name">Four Cheese</div>
+         <div class="Description">Mozzarella, fontina, parmesan and goat cheeses with tomato sauce.</div>
+         <ul class="menu-item-attributes">
+            <li onclick="selectSize(this)">small</li>
+            <li onclick="selectSize(this)">medium</li>
+            <li onclick="selectSize(this)">large</li>
+            <li onclick="selectSize(this)">x-large</li>
+         </ul>
+         <form onsubmit="scrollToMenu()">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="price">₱<span>699</span>/-</div>
+         <img src="images/pizza-3.jpg" alt="">
+         <div class="name">Italian</div>
+         <div class="Description">Pepperoni, Italian sausage, prosciutto, pancetta, red onions and mozzarella cheese with tomato sauce.</div>
+         <ul class="menu-item-attributes">
+            <li onclick="selectSize(this)">small</li>
+            <li onclick="selectSize(this)">medium</li>
+            <li onclick="selectSize(this)">large</li>
+            <li onclick="selectSize(this)">x-large</li>
+         </ul>
+         <form onsubmit="scrollToMenu()">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="price">₱<span>359</span>/-</div>
+         <img src="images/pizza-4.jpg" alt="">
+         <div class="name">Hawaiian</div>
+         <div class="Description">Tomato Sauce, Mozzarella/Provolone Cheese, Ham & Pineapple.</div>
+         <ul class="menu-item-attributes">
+            <li onclick="selectSize(this)">small</li>
+            <li onclick="selectSize(this)">medium</li>
+            <li onclick="selectSize(this)">large</li>
+            <li onclick="selectSize(this)">x-large</li>
+         </ul>
+         <form onsubmit="scrollToMenu()">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="price">₱<span>579</span>/-</div>
+         <img src="images/pizza-5.jpg" alt="">
+         <div class="name">Supremo</div>
+         <div class="Description">Tomato sauce, mozzarella cheese, pepperoni, fresh mushrooms, green peppers, caramelized onions, Italian sausage and black olives.</div>
+         <ul class="menu-item-attributes">
+            <li onclick="selectSize(this)">small</li>
+            <li onclick="selectSize(this)">medium</li>
+            <li onclick="selectSize(this)">large</li>
+            <li onclick="selectSize(this)">x-large</li>
+         </ul>
+         <form onsubmit="scrollToMenu()">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="price">₱<span>449</span>/-</div>
+         <img src="images/pizza-6.jpg" alt="">
+         <div class="name">Prima</div>
+         <div class="Description">Caramelized onions, goat cheese, roma tomatoes, spinach, artichoke hearts and mozzarella cheese with garlic sauce.</div>
+         <ul class="menu-item-attributes">
+            <li onclick="selectSize(this)">small</li>
+            <li onclick="selectSize(this)">medium</li>
+            <li onclick="selectSize(this)">large</li>
+            <li onclick="selectSize(this)">x-large</li>
+         </ul>
+         <form onsubmit="scrollToMenu()">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="price">₱<span>199</span>/-</div>
+         <img src="images/pizza-7.jpg" alt="">
+         <div class="name">Tuscan</div>
+         <div class="Description">Pancetta, sun-dried tomatoes, goat cheese and mozzarella cheese with garlic sauce.</div>
+         <ul class="menu-item-attributes">
+            <li onclick="selectSize(this)">small</li>
+            <li onclick="selectSize(this)">medium</li>
+            <li onclick="selectSize(this)">large</li>
+            <li onclick="selectSize(this)">x-large</li>
+         </ul>
+         <form onsubmit="scrollToMenu()">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="price">₱<span>449</span>/-</div>
+         <img src="images/pizza-8.jpg" alt="">
+         <div class="name">Roasted Eggplant</div>
+         <div class="Description">Eggplant, roasted red peppers, kalamata olives and mozzarella cheese with garlic sauce.</div>
+         <ul class="menu-item-attributes">
+            <li onclick="selectSize(this)">small</li>
+            <li onclick="selectSize(this)">medium</li>
+            <li onclick="selectSize(this)">large</li>
+            <li onclick="selectSize(this)">x-large</li>
+         </ul>
+         <form onsubmit="scrollToMenu()">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="price">₱<span>399</span>/-</div>
+         <img src="images/pizza-9.jpg" alt="">
+         <div class="name">Meatlovers</div>
+         <div class="Description">Tomato sauce, mozzarella cheese, pepperoni, bacon, ham, Italian sausage.</div>
+         <ul class="menu-item-attributes">
+            <li onclick="selectSize(this)">small</li>
+            <li onclick="selectSize(this)">medium</li>
+            <li onclick="selectSize(this)">large</li>
+            <li onclick="selectSize(this)">x-large</li>
+         </ul>
+         <form onsubmit="scrollToMenu()">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="price">₱<span>159</span>/-</div>
+         <img src="images/pizza-10.jpg" alt="">
+         <div class="name">Portabella</div>
+         <div class="Description">Portabella mushrooms, caramelized onions, roasted garlic and mozzarella cheese with garlic sauce.</div>
+         <ul class="menu-item-attributes">
+            <li onclick="selectSize(this)">small</li>
+            <li onclick="selectSize(this)">medium</li>
+            <li onclick="selectSize(this)">large</li>
+            <li onclick="selectSize(this)">x-large</li>
+         </ul>
+         <form onsubmit="scrollToMenu()">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="price">₱<span>249</span>/-</div>
+         <img src="images/pizza-11.jpg" alt="">
+         <div class="name">Buffalo Spicy Chicken</div>
+         <div class="Description">Buffalo spicy sauce, mozzarella cheese, grilled chicken, green pepper, sun-dried tomatoes and red onions.</div>
+         <ul class="menu-item-attributes">
+            <li onclick="selectSize(this)">small</li>
+            <li onclick="selectSize(this)">medium</li>
+            <li onclick="selectSize(this)">large</li>
+            <li onclick="selectSize(this)">x-large</li>
+         </ul>
+         <form onsubmit="scrollToMenu()">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+      <div class="box">
+         <div class="price">₱<span>189</span>/-</div>
+         <img src="images/pizza-12.jpg" alt="">
+         <div class="name">Roma Prosciutto</div>
+         <div class="Description">Prosciutto, roma tomatoes, greens and fresh mozzarella with virgin olive oil.</div>
+         <ul class="menu-item-attributes">
+            <li onclick="selectSize(this)">small</li>
+            <li onclick="selectSize(this)">medium</li>
+            <li onclick="selectSize(this)">large</li>
+            <li onclick="selectSize(this)">x-large</li>
+         </ul>
+         <form onsubmit="scrollToMenu()">
+            <input type="number" min="1" max="100" value="1" class="qty" name="qty">
+            <input type="submit" value="add to cart" name="add_to_cart" class="btn">
+         </form>
+      </div>
+
+   </div>
+
+</section>
+
+<!-- menu section ends -->
+
+<!-- order section starts  -->
+
+<section class="order" id="order">
+
+   <h1 class="heading">order now</h1>
+
+   <form action="" method="post">
+
+      <div class="display-orders">
+         <p>Margherita <span>( ₱249/- x 2 )</span></p>
+         <p>Italian <span>( ₱699/- x 1 )</span></p>
+         <p>Prima <span>( ₱449/- x 4 )</span></p>
+         <p>Tuscan <span>( ₱199/- x 1 )</span></p>
+      </div>
+
+      <div class="flex">
+         <div class="inputBox">
+            <span>Enter your name :</span>
+            <input type="text" name="name" class="box" required placeholder="Enter your name" maxlength="20">
+         </div>
+         <div class="inputBox">
+            <span>Enter your number :</span>
+            <input type="number" name="number" class="box" required placeholder="Enter your number" min="0">
+         </div>
+         <div class="inputBox">
+            <span>Mayment method</span>
+            <select name="method" class="box">
+               <option value="cash on delivery">Cash on delivery</option>
+               <option value="credit card">Credit card</option>
+               <option value="paytm">Gcash</option>
+               <option value="paypal">Paypal</option>
+            </select>
+         </div>
+         <div class="inputBox">
+            <span>Address line 01 :</span>
+            <input type="text" name="flat" class="box" required placeholder="Address" maxlength="50">
+         </div>
+         <div class="inputBox">
+            <span>Address line 02 :</span>
+            <input type="text" name="street" class="box" required placeholder="Street name" maxlength="50">
+         </div>
+         <div class="inputBox">
+            <span>Pin code :</span>
+            <input type="number" name="pin_code" class="box" required placeholder="e.g. 4900" min="0">
+         </div>
+      </div>
+
+      <input type="submit" value="order now" class="btn" name="order">
+
+   </form>
+
+</section>
+
+<!-- order section ends -->
+
+<!-- faq section starts  -->
+
+<section class="faq" id="faq">
+
+   <h1 class="heading">FAQ</h1>
+
+   <div class="accordion-container">
+
+      <div class="accordion active">
+         <div class="accordion-heading">
+            <span>How does a pizza ordering app work?</span>
+            <i class="fas fa-angle-down"></i>
+         </div>
+         <p class="accrodion-content">
+            Pizza ordering apps typically work by connecting the user with a specific pizzeria or a network of participating pizza restaurants. Users can download the app, create an account, and then browse through the available menu options. They can select their desired pizzas, choose toppings, specify delivery or pickup options, and make payment through the app. The app then sends the order details to the restaurant, and the user receives updates on the status of their order.
+         </p>
+      </div>
+
+      <div class="accordion">
+         <div class="accordion-heading">
+            <span>How can I track the status of my pizza order?</span>
+            <i class="fas fa-angle-down"></i>
+         </div>
+         <p class="accrodion-content">
+            Many pizza ordering apps provide real-time order tracking features. After you place your order, the app will often display the estimated delivery or pickup time. You may receive notifications or updates regarding the status of your order, such as when it's being prepared, out for delivery, or ready for pickup. This allows you to track the progress of your order and get an idea of when it will arrive.
+         </p>
+      </div>
+
+      <div class="accordion">
+         <div class="accordion-heading">
+            <span>How can I download a pizza ordering app??</span>
+            <i class="fas fa-angle-down"></i>
+         </div>
+         <p class="accrodion-content">
+            Pizza ordering apps can be downloaded from the respective app stores of your mobile device. If you have an iOS device, such as an iPhone or iPad, you can find and download apps from the Apple App Store. If you have an Android device, like a smartphone or tablet, you can download apps from the Google Play Store. Simply search for the name of the pizza chain or use keywords like "pizza ordering" to find relevant apps.
+         </p>
+      </div>
+
+      <div class="accordion">
+         <div class="accordion-heading">
+            <span>Can I pay for my pizza order through the app?</span>
+            <i class="fas fa-angle-down"></i>
+         </div>
+         <p class="accrodion-content">
+            Yes, pizza ordering apps typically offer various payment options. You can usually pay for your order directly through the app using credit or debit cards. Some apps may also support digital wallets like Apple Pay or Google Pay. Additionally, you may have the option to pay in cash upon delivery or pickup, depending on the specific policies of the pizzeria or the app.
+
+
+         </p>
+      </div>
+
+
+      <div class="accordion">
+         <div class="accordion-heading">
+            <span>Can I save my favorite orders or preferences in the app?</span>
+            <i class="fas fa-angle-down"></i>
+         </div>
+         <p class="accrodion-content">
+            Yes, pizza ordering apps often include features that allow you to save your favorite
+         </p>
+      </div>
+
+   </div>
+
+</section>
+
+<!-- faq section ends -->
+
+<section class="review" id="review">
+
+   <h1 class="heading"> our customers <span>reviews</span> </h1>
+
+    
+      <div class="box-container">
+
+         <div class="box">
+            <img src="images/person1.jpeg" alt="">
+            <h3>Ivy Santos</h3>
+
+            <p>I ordered a Pizza last Friday and got it on time, they have the best customer services.</p>
+         </div>
+
+         <div class="box">
+            <img src="images/person2.jpeg" alt="">
+            <h3>John Dela Cruz</h3>
+        
+            <p>Pizza from Monseratt is flippin' delicious!! love ittt! and I'd like to recommend this place to get tasty pizza on time.</p>
+         </div>
+
+        <div class="box">
+            <img src="images/person3.jpg" alt="">
+            <h3>Gordon Ramsay</h3>
+
+            <p> I took one bite and felt like i was in Italy,great quality pizza!</p>
+         </div>
+
+      </div>
+
+</section>
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+   <div class="box-container">
+
+      <div class="box">
+         <i class="fas fa-phone"></i>
+         <h3>Phone number</h3>
+         <p>+63 912 3456 789</p>
+         <p>+63 912 3456 789</p>
+      </div>
+
+      <div class="box">
+         <i class="fas fa-map-marker-alt"></i>
+         <h3>Our address</h3>
+         <p>Isok Boac <br>Marinduqe</p>
+      </div>
+
+      <div class="box">
+         <i class="fas fa-clock"></i>
+         <h3>Opening hours</h3>
+         <p>08:00am to 09:00pm</p>
+      </div>
+
+      <div class="box">
+         <i class="fas fa-envelope"></i>
+         <h3>Email address</h3>
+         <p>markgilbertreginio@gmail.com</p>
+         <p>markgilbertreginio@gmail.com</p>
+      </div>
+
+   </div>
+
+   <div class="credit">
+      &copy; Copyright @ 2023 by | <span>Group 5 BSIT </span> | All Rights Reserved! |
+      <a href="TermsOfUse.html" class="terms-link">Terms of use</a>
+   </div>
+
+</section>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
