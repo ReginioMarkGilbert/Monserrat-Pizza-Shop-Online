@@ -879,11 +879,11 @@ li {
 .payment-method {
    display: flex;
    align-items: center;
-   margin-right: 40px; /* Adjust the margin as needed */
+   margin-right: 40px;
 }
 
 .payment-method select {
-   margin-right: 10px; /* Adjust the margin as needed */
+   margin-right: 10px;
 }
 
 .payment-method-icons {
@@ -892,11 +892,10 @@ li {
 }
 
 .payment-method-icons img {
-   margin-left: 35px; /* Adjust the margin as needed */
-   margin-right: -15px; /* Adjust the margin as needed */
-   height: 30px; /* Adjust the height of the icons as needed */
+   margin-left: 35px;
+   margin-right: -15px;
+   height: 30px;
 }
-
 
 
 
