@@ -573,9 +573,22 @@
             <input type="text" name="street" class="box" required placeholder="Street name" maxlength="50">
          </div>
          <div class="inputBox">
-            <span>Pin code :</span>
-            <input type="number" name="pin_code" class="box" required placeholder="e.g. 4900" min="0">
+            <span>Mode of Payment :</span>
+            <div class="payment-method">
+               <select name="payment_method" class="box">
+                  <option value="gcash">Gcash</option>
+                  <option value="paypal">Paypal</option>
+                  <option value="credit_card">Credit Card</option>
+               </select>
+               <div class="payment-method-icons">
+                  <img src="images/Gcash.jpg" alt="Gcash Icon" class="gcash-icon">
+                  <img src="images/paypal.png" alt="Paypal Icon" class="paypal-icon">
+                  <img src="images/creditcard.png" alt="Credit Card Icon" class="credit-card-icon">
+               </div>
+            </div>
          </div>
+         
+         
       </div>
 
       <input type="submit" value="order now" class="btn" name="order">
