@@ -53,12 +53,6 @@ body{
    background-image: url(../images/bg-image.jpg);
 }
 
-@media only screen and (max-width: 600px) {
-   body {
-      background-size: contain;
-   }
-}
-
 section{
    padding:2rem;
    margin:0 auto;
@@ -95,7 +89,7 @@ section{
    margin-right: 40vh;
 }
 
-/* Mobile Styles for "Monserrat pizaza" */
+/* Mobile Styles for "Monserrat piza */
 @media (max-width: 768px) {
    .header .flex p {
       margin-right: 5rem;
@@ -104,7 +98,6 @@ section{
       margin-right: 8rem;
    }
 }
-
 
 .btn{ /*button for add to cart in Our Menu*/
    display: block;
@@ -141,17 +134,15 @@ section{
 }
 
 /* NAV MENU */
-.header {
+.header{ /*nav bar*/
    position: fixed;
-   top: 0;
-   left: 0;
-   right: 0;
+   top:0; left:0; right:0;
    background-color: var(--light-black);
    box-shadow: var(--box-shadow);
    z-index: 1000;
 }
 
-.header .flex {
+.header .flex{
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -161,8 +152,6 @@ section{
 .navigation-menu {
    display: flex;
    list-style: none;
-   margin: 0;
-   padding: 0;
 }
 
 .navigation-menu li {
@@ -183,68 +172,58 @@ section{
 
 .navigation-menu li a {
    font-size: 16px;
-   font-family: var(--poppins-font);
+   font-family: var(--poppins-font)
 }
 
 /* Mobile Styles */
 @media (max-width: 768px) {
    .navigation-menu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: var(--light-black);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      z-index: 100;
-   }
-
-   .navigation-menu li {
-      margin-bottom: 10px;
-   }
-
-   .navigation-menu li:last-child {
-      margin-bottom: 0;
-   }
-
-   .navigation-menu li a {
-      font-size: 18px;
+      display: none;
    }
 
    .icons {
       display: flex;
-      align-items: center;
    }
 
    .icons div {
       margin: 0 5px;
    }
-}
+   
 
-.header .flex .icons div {
+   #menu-btn.active ~ .main-nav .navigation-menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--light-black);
+      padding: 20px;
+   }
+
+   #menu-btn.active ~ .main-nav .navigation-menu li {
+      margin-right: 0;
+      margin-bottom: 10px;
+   }
+}
+     
+
+.header .flex .icons div{
    font-size: 2.5rem;
    color: var(--light-color);
    cursor: pointer;
    margin-left: 1.7rem;
 }
 
-.header .flex .icons div:hover {
-   color: var(--red);
+.header .flex .icons div:hover{
+   color:var(--red);
 }
 
-.header .flex .icons div span {
+.header .flex .icons div span{
    font-size: 2rem;
 }
 
-#menu-btn {
+#menu-btn{
    display: none;
 }
 /* NAV MENU  - end -*/
-
 .user-account{
    position: fixed;
    top:0; right:-110%;
